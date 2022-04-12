@@ -6,11 +6,6 @@ const row = document.querySelector('.row');
 
 SearchBtn.addEventListener('click',()=>{
   let country = countryInput.value;
-
- setTimeout(function(){
-  console.log(country);
- },5000)
-
   if(country.length != 0){
       let apidata = `${apiUrl}${country}`;
   row.innerHTML = "";
@@ -19,7 +14,7 @@ SearchBtn.addEventListener('click',()=>{
     .then((data) => {
       splice(data);
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {});
   }else{
   row.innerHTML = "search field is required";
 
@@ -29,7 +24,6 @@ SearchBtn.addEventListener('click',()=>{
 
 
   const splice = (data) => {
-    console.log(data);
         
       for (let x = 0; x <= data.length; x++) {
         process(data[x]);
@@ -82,7 +76,6 @@ SearchBtn.addEventListener('click',()=>{
 
    row.innerHTML += htmlData;
   };
-
 
 
 
