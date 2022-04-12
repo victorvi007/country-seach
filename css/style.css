@@ -169,6 +169,6 @@ section {
 @media(min-width:2400px) {
     .container{
         max-width:2400px;
-        border:1px solid red;
+
     }
 }
